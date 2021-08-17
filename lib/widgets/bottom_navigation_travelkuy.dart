@@ -24,7 +24,7 @@ class _BottomNavigationTravelkuyState extends State<BottomNavigationTravelkuy> {
   @override
   Widget build(BuildContext context) {
     return Container(
-      height: 64,
+      height: 70,
       decoration: BoxDecoration(
         color: mFillColor,
         boxShadow: [
