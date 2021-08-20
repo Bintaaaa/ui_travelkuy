@@ -1,6 +1,7 @@
 import 'package:basic_implement_ui_3/constans/color_constans.dart';
 import 'package:basic_implement_ui_3/constans/style_constans.dart';
 import 'package:basic_implement_ui_3/models/carousel_model.dart';
+import 'package:basic_implement_ui_3/models/popular_destination_model.dart';
 import 'package:basic_implement_ui_3/widgets/bottom_navigation_travelkuy.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
@@ -34,6 +35,7 @@ class _HomeScreenState extends State<HomeScreen> {
         ),
       backgroundColor: mBackgroundColor,
       bottomNavigationBar: BottomNavigationTravelkuy(),
+
 
       //body
       body: Container(
@@ -106,12 +108,246 @@ class _HomeScreenState extends State<HomeScreen> {
                             );
                             }
                         ),
+                      ),
+                      //More Text
+                      Text(
+                        "More...",
+                        style: mMoreDiscountStyle,
                       )
                     ],
                   )
                 ],
               ),
-            )
+            ),
+            Padding(
+              padding:  EdgeInsets.only(left: 16, top: 22,bottom: 16),
+              child: Text("Let\'s Booking!",
+                style: mTitleStyle,
+              ),
+            ),
+            Container(
+              height: 144,
+              margin: EdgeInsets.only(left: 16,right: 16,bottom: 20),
+              child: Column(
+                children: <Widget>[
+                  Row(
+                    children: <Widget>[
+                      Expanded(
+                        child: Container(
+                          margin: EdgeInsets.only(right: 8),
+                          padding: EdgeInsets.only(left: 16),
+                          height: 64,
+                          decoration: BoxDecoration(
+                            color: mFillColor,
+                            borderRadius: BorderRadius.circular(12),
+                            border: Border.all(
+                              color: mBorderColor,
+                              width: 1
+                            ),
+                          ),
+                          child: Row(
+                            children: <Widget>[
+                              SvgPicture.asset(
+                                'assets/svg/service_train_icon.svg',
+                                fit: BoxFit.contain,
+                              ),
+                              Padding(padding: EdgeInsets.only(left: 16),
+                                child: Column(
+                                  crossAxisAlignment: CrossAxisAlignment.start,
+                                  mainAxisAlignment: MainAxisAlignment.center,
+                                  children: <Widget>[
+                                    Text(
+                                      'Trains',
+                                      style: mServiceTitleStyle,
+                                    ),
+                                    Text(
+                                      'Intercity',
+                                      style: mServiceSubtitleStyle,
+                                    )
+                                  ],
+                                ),
+                              )
+                            ],
+                          ),
+                        ),
+                      ),
+                      Expanded(
+                        child: Container(
+                          margin: EdgeInsets.only(right: 8),
+                          padding: EdgeInsets.only(left: 16),
+                          height: 64,
+                          decoration: BoxDecoration(
+                            color: mFillColor,
+                            borderRadius: BorderRadius.circular(12),
+                            border: Border.all(
+                                color: mBorderColor,
+                                width: 1
+                            ),
+                          ),
+                          child: Row(
+                            children: <Widget>[
+                              SvgPicture.asset(
+                                'assets/svg/service_flight_icon.svg',
+                                fit: BoxFit.contain,
+                              ),
+                              Padding(padding: EdgeInsets.only(left: 16),
+                                child: Column(
+                                  crossAxisAlignment: CrossAxisAlignment.start,
+                                  mainAxisAlignment: MainAxisAlignment.center,
+                                  children: <Widget>[
+                                    Text("Flight",
+                                        style: mServiceTitleStyle
+                                    ),
+                                    Text("Feel freedom",
+                                      style: mServiceSubtitleStyle,
+                                    )
+                                  ],
+                                ),
+                              )
+                            ],
+                          ),
+                        ),
+                      )
+                    ],
+                  ),
+                  SizedBox(
+                    height: 16,
+                  ),
+                  Row(
+                    children: <Widget>[
+                      Expanded(
+                        child: Container(
+                          margin: EdgeInsets.only(right: 8),
+                          padding: EdgeInsets.only(left: 16),
+                          height: 64,
+                          decoration: BoxDecoration(
+                            color: mFillColor,
+                            borderRadius: BorderRadius.circular(12),
+                            border: Border.all(
+                                color: mBorderColor,
+                                width: 1
+                            ),
+                          ),
+                          child: Row(
+                            children: <Widget>[
+                              SvgPicture.asset(
+                                'assets/svg/service_hotel_icon.svg',
+                                fit: BoxFit.contain,
+                              ),
+                              Padding(padding: EdgeInsets.only(left: 16),
+                                child: Column(
+                                  crossAxisAlignment: CrossAxisAlignment.start,
+                                  mainAxisAlignment: MainAxisAlignment.center,
+                                  children: <Widget>[
+                                    Text(
+                                      'Hotel',
+                                      style: mServiceTitleStyle,
+                                    ),
+                                    Text(
+                                      'Let\'s take a break',
+                                      style: mServiceSubtitleStyle,
+                                    )
+                                  ],
+                                ),
+                              )
+                            ],
+                          ),
+                        ),
+                      ),
+                      Expanded(
+                        child: Container(
+                          margin: EdgeInsets.only(right: 8),
+                          padding: EdgeInsets.only(left: 16),
+                          height: 64,
+                          decoration: BoxDecoration(
+                            color: mFillColor,
+                            borderRadius: BorderRadius.circular(12),
+                            border: Border.all(
+                                color: mBorderColor,
+                                width: 1
+                            ),
+                          ),
+                          child: Row(
+                            children: <Widget>[
+                              SvgPicture.asset(
+                                'assets/svg/service_car_rental_icon.svg',
+                                fit: BoxFit.contain,
+                              ),
+                              Padding(padding: EdgeInsets.only(left: 16),
+                                child: Column(
+                                  crossAxisAlignment: CrossAxisAlignment.start,
+                                  mainAxisAlignment: MainAxisAlignment.center,
+                                  children: <Widget>[
+                                    Text(
+                                      'Car Rental',
+                                      style: mServiceTitleStyle,
+                                    ),
+                                    Text(
+                                      'Around the city',
+                                      style: mServiceSubtitleStyle,
+                                    )
+                                  ],
+                                ),
+                              )
+                            ],
+                          ),
+                        ),
+                      )
+                    ],
+                  )
+                ],
+              ),
+            ),
+            Padding(
+                padding:  EdgeInsets.only(left: 16, top: 22,bottom: 16),
+                child: Text("Popular Destinations!",
+                style: mTitleStyle,
+                ),
+            ),
+            Container(
+              height: 140,
+              child: ListView.builder(
+                itemCount: populars.length,
+                padding: EdgeInsets.only(left: 16, right: 16),
+                scrollDirection: Axis.horizontal,
+                itemBuilder: (context, index) {
+                  return Card(
+                    elevation: 0,
+                    shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(12),
+                    ),
+                    child: Container(
+                      height: 140,
+                      width: 120,
+                      decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(12),
+                        border: Border.all(color: mBorderColor, width: 1),
+                      ),
+                      child: Padding(
+                        padding: const EdgeInsets.only(top: 8.0, bottom: 16),
+                        child: Column(
+                          children: <Widget>[
+                            Image.asset(
+                              populars[index].image,
+                              height: 74,
+                            ),
+                            Text(
+                              populars[index].name,
+                              style: mPopularDestinationTitleStyle,
+                            ),
+                            Text(
+                              populars[index].country,
+                              style: mPopularDestinationSubtitleStyle,
+                            )
+                          ],
+                        ),
+                      ),
+                    ),
+                  );
+                },
+              ),
+            ),
+
           ],
         ),
       ),
